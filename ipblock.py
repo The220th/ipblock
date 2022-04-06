@@ -133,6 +133,7 @@ def ipblockProcess(IP : str, MASK : str):
     print(printIP_2((res1, res2, res3, res4)))
     print(f"or {printIP((res1, res2, res3, res4)).replace(' ', '')}/{prefix}")
     print("")
+    print(f"Host: {printIP((oct1 & ~mask1, oct2 & ~mask2, oct3 & ~mask3, oct4 & ~mask4)).replace(' ', '')}")
     print(f"Hosts available: {countHosts(prefix)}")
 
 if __name__ == '__main__':
